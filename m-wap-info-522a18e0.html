@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>完美对战平台 · 关于服务入口与使用说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: #fafbfc;
+            color: #1e2a3a;
+            line-height: 1.7;
+            letter-spacing: 0.01em;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 720px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 2.4rem 1.8rem;
+            flex: 1;
+        }
+
+        /* 极简留白排版 */
+        h1, h2, h3 {
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            color: #0b1a2b;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            line-height: 1.25;
+            margin-bottom: 0.8rem;
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            display: block;
+            width: 48px;
+            height: 3px;
+            background: #2a6b9c;
+            margin-top: 0.5rem;
+            border-radius: 4px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            margin-top: 2.2rem;
+            margin-bottom: 0.7rem;
+            padding-bottom: 0.2rem;
+            border-bottom: 1px solid #dce3ec;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            margin-top: 1.6rem;
+            margin-bottom: 0.4rem;
+            font-weight: 500;
+            color: #1e3c5c;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #2c3e50;
+        }
+
+        .intro {
+            background: #ffffff;
+            padding: 1.8rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 20, 50, 0.04);
+            margin: 1.2rem 0 2rem 0;
+        }
+
+        .highlight-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 1.5rem 0 1.2rem 0;
+        }
+
+        .card-item {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 1.2rem 1.4rem;
+            flex: 1 1 200px;
+            border: 1px solid #e9eef3;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .card-item:hover {
+            box-shadow: 0 6px 14px rgba(40, 80, 120, 0.06);
+        }
+
+        .card-item strong {
+            display: block;
+            font-weight: 500;
+            color: #1f4468;
+            margin-bottom: 0.3rem;
+        }
+
+        .card-item span {
+            font-size: 0.95rem;
+            color: #425a70;
+        }
+
+        .insight-box {
+            background: #edf3f9;
+            border-left: 4px solid #2a6b9c;
+            padding: 1.2rem 1.6rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.8rem 0 1.2rem 0;
+        }
+
+        .faq-summary {
+            list-style: none;
+            margin-top: 0.8rem;
+        }
+
+        .faq-summary li {
+            margin-bottom: 0.9rem;
+            padding-left: 1.4rem;
+            position: relative;
+            color: #2c3e50;
+        }
+
+        .faq-summary li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #2a6b9c;
+            font-weight: bold;
+        }
+
+        .faq-summary strong {
+            color: #1e3a5a;
+            font-weight: 500;
+        }
+
+        .link-embed {
+            color: #1d5b8c;
+            text-decoration: none;
+            border-bottom: 1px solid #b3c9dd;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        .link-embed:hover {
+            color: #0a3b5e;
+            border-bottom-color: #0a3b5e;
+        }
+
+        .footer-note {
+            margin-top: 3rem;
+            padding-top: 1.4rem;
+            border-top: 1px solid #dce3ec;
+            font-size: 0.9rem;
+            color: #5d738b;
+            text-align: left;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e2e8f0;
+            margin: 1.8rem 0;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.6rem 1.2rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            h2 {
+                font-size: 1.25rem;
+                margin-top: 1.8rem;
+            }
+            .intro {
+                padding: 1.2rem 1.2rem;
+            }
+            .card-item {
+                flex: 1 1 100%;
+            }
+        }
+
+        @media (min-width: 1000px) {
+            .container {
+                padding: 3rem 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- 标题区 -->
+    <h1>完美对战平台 · 服务入口与使用说明</h1>
+    <p style="color: #4a627a; font-size: 1.05rem; margin-bottom: 0.2rem;">
+        一个面向稳定对战体验的移动端服务页面，提供清晰的访问路径与功能指引。
+    </p>
+
+    <!-- 核心摘要 -->
+    <div class="intro">
+        <p style="margin-bottom: 0.4rem;">
+            <strong>完美对战平台</strong> 是一个以对战匹配与游戏数据管理为核心的轻量级页面。它并非传统意义上的大型客户端，而是为玩家提供一个快速查对、战绩浏览以及活动参与的移动Web入口。页面结构经过精简，重点突出对战信息的整合与稳定调用。
+        </p>
+        <p style="margin-bottom: 0;">
+            如果你正在寻找一个可以直接在浏览器中使用的对战辅助页，那么<a href="https://m-wap-wanmei.com" class="link-embed">完美对战平台</a>的设计初衷即在于此——它不依赖额外下载，开箱即用，并保持最低的加载干扰。
+        </p>
+    </div>
+
+    <!-- 亮点：卡片式 -->
+    <h2>平台亮点</h2>
+    <div class="highlight-grid">
+        <div class="card-item">
+            <strong>轻量加载</strong>
+            <span>页面资源控制得当，首屏内容快速呈现，适合移动网络环境。</span>
+        </div>
+        <div class="card-item">
+            <strong>战绩查询</strong>
+            <span>支持最近对局记录与基础统计，信息呈现直接，减少操作层级。</span>
+        </div>
+        <div class="card-item">
+            <strong>活动聚合</strong>
+            <span>将限时任务与奖励说明集中展示，方便玩家随时了解当前内容。</span>
+        </div>
+    </div>
+
+    <!-- 使用建议段落（承接上文） -->
+    <h2>使用建议</h2>
+    <p>
+        由于该页面采用移动优先的适配逻辑，建议在手机或平板浏览器中直接访问。若在桌面端打开，页面同样会以合理宽度居中显示，不会出现元素溢出或排版错位。对于经常需要查看对战进度或战绩更新的玩家，可以将<a href="https://m-wap-wanmei.com" class="link-embed">完美对战平台</a>添加至主屏幕（iOS Safari 或 Android Chrome 均支持），以获得类似原生应用的快速入口体验。
+    </p>
+    <p>
+        需要留意的是，部分对战数据可能需要登录验证才能完整显示。请确保在访问时已使用有效的游戏账号进行绑定，否则战绩模块可能会显示为空白或基础信息。页面本身不存储敏感凭证，所有鉴权均跳转至官方验证通道。
+    </p>
+
+    <!-- 场景提示块 (知识型说明) -->
+    <div class="insight-box">
+        <h3 style="margin-top: 0; border-bottom: none; padding-bottom: 0;">适用场景举例</h3>
+        <ul style="list-style: none; padding-left: 0; margin: 0.5rem 0 0 0;">
+            <li style="margin-bottom: 0.4rem; padding-left: 1.4rem; position: relative;">
+                <span style="position: absolute; left: 0; color: #2a6b9c;">·</span>
+                <strong>通勤途中</strong> —— 快速查看前一场对局的表现评分，不需要打开大型应用。
+            </li>
+            <li style="margin-bottom: 0.4rem; padding-left: 1.4rem; position: relative;">
+                <span style="position: absolute; left: 0; color: #2a6b9c;">·</span>
+                <strong>活动核对</strong> —— 确认当前进行中的累计任务进度，规划每日参与节奏。
+            </li>
+            <li style="margin-bottom: 0; padding-left: 1.4rem; position: relative;">
+                <span style="position: absolute; left: 0; color: #2a6b9c;">·</span>
+                <strong>临时查询</strong> —— 在聊天或论坛讨论中需要某个战报数据时，直接打开页面检索。
+            </li>
+        </ul>
+    </div>
+
+    <!-- FAQ摘要 -->
+    <h2>常见疑问摘要</h2>
+    <ul class="faq-summary">
+        <li><strong>是否需要注册新账号？</strong> 不强制。页面使用游戏已有的通行证体系，未登录时仍可浏览部分公开信息。</li>
+        <li><strong>数据更新频率如何？</strong> 对局记录通常在比赛结束后几分钟内同步，具体延迟取决于游戏服务端刷新。</li>
+        <li><strong>页面会推送通知吗？</strong> 默认不主动推送。如果浏览器允许，可能会显示活动开始提示，可在浏览器设置中管理权限。</li>
+        <li><strong>遇到显示异常怎么办？</strong> 首先尝试清除页面缓存或使用无痕模式访问，确认是否为本地扩展干扰。</li>
+    </ul>
+
+    <!-- 克制的访问说明 -->
+    <hr>
+    <p style="font-size: 0.95rem; color: #3d5770;">
+        访问提示：本页面仅作为功能入口与使用说明，所有对战数据均来自官方接口，不经过第三方中转。请通过上方链接直接访问<a href="https://m-wap-wanmei.com" class="link-embed">完美对战平台</a>，避免使用来源不明的镜像或仿冒地址。平台页面本身不包含充值、交易或敏感权限申请，如遇异常弹窗请谨慎操作。
+    </p>
+
+    <!-- 底部 -->
+    <div class="footer-note">
+        <span>版本概览 · 移动端对战入口说明</span>
+    </div>
+</div>
+</body>
+</html>
